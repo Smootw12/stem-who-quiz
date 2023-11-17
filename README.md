@@ -1,4 +1,4 @@
-## Come eseguire (non c'è bisogno è hostato)
+## Come eseguire (non c'è bisogno, è hostato)
 
 Per saltare tutti questi step [visita direttamente l'applicazione hostata](https://nextjs.org/docs)
 
