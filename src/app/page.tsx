@@ -24,7 +24,9 @@ export default function Home() {
               <li className="font-bold mb-2">Personaggi disponibili</li>
               <hr />
               {subjects.map((subject) => (
-                <li className="hover:bg-base-200 px-1 py-1">{subject}</li>
+                <li key={subject} className="hover:bg-base-200 px-1 py-1">
+                  {subject}
+                </li>
               ))}
             </ul>
           </div>
