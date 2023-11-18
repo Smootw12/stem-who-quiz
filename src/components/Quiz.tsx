@@ -17,15 +17,20 @@ function Quiz() {
 
   function getAnswer() {
     let biggest = { name: "", value: 0 };
+    let isValid = false;
 
     for (let key in answersMap) {
+      if (answersMap[key] === biggest.value) {
+        isValid = false;
+      }
       if (answersMap[key] > biggest.value) {
         biggest.name = key;
         biggest.value = answersMap[key];
+        isValid = true;
       }
     }
 
-    return biggest.value > 0 ? biggest.name : "Nessuno!";
+    return isValid ? biggest.name : "Gioca sul serio!";
   }
 
   function submitAnswer() {
