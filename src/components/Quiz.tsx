@@ -19,6 +19,8 @@ function Quiz() {
     let biggest = { name: "", value: 0 };
     let isValid = false;
 
+    let isValid = false;
+
     for (let key in answersMap) {
       if (answersMap[key] === biggest.value) {
         isValid = false;
@@ -60,13 +62,13 @@ function Quiz() {
     setAnswerState(change);
   }
 
-  if (questionIdx < questionData.numberOfQuestions) {
+  if (questionIdx < questionData.questions.length) {
     return (
       <div className="flex justify-center h-[100vh] items-center">
         <div>
           <h1 className="text-2xl font-semibold">Questions</h1>
           <span className="text-sm">
-            Question {questionIdx + 1} of {questionData.numberOfQuestions}
+            Question {questionIdx + 1} of {questionData.questions.length}
           </span>
           <h1 className="text-2xl font-medium mb-3">
             {questionData.questions[questionIdx].question}

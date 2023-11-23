@@ -7,6 +7,5 @@ export interface Question {
 }
 
 export interface QuestionData {
-  numberOfQuestions: number;
   questions: Question[];
 }
