@@ -18,14 +18,20 @@ function Quiz() {
   function getAnswer() {
     let biggest = { name: "", value: 0 };
 
+    let isValid = false;
+
     for (let key in answersMap) {
+      if (answersMap[key] === biggest.value) {
+        isValid = false;
+      }
       if (answersMap[key] > biggest.value) {
         biggest.name = key;
         biggest.value = answersMap[key];
+        isValid = true;
       }
     }
 
-    return biggest.value > 0 ? biggest.name : "Nessuno!";
+    return isValid ? biggest.name : "Gioca sul serio!";
   }
 
   function submitAnswer() {
@@ -55,13 +61,13 @@ function Quiz() {
     setAnswerState(change);
   }
 
-  if (questionIdx < questionData.numberOfQuestions) {
+  if (questionIdx < questionData.questions.length) {
     return (
       <div className="flex justify-center h-[100vh] items-center">
         <div>
           <h1 className="text-2xl font-semibold">Questions</h1>
           <span className="text-sm">
-            Question {questionIdx + 1} of {questionData.numberOfQuestions}
+            Question {questionIdx + 1} of {questionData.questions.length}
           </span>
           <h1 className="text-2xl font-medium mb-3">
             {questionData.questions[questionIdx].question}
