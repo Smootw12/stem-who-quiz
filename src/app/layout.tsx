@@ -28,7 +28,6 @@ export default function RootLayout({
       <ClientCookiesProvider value={cookies().getAll()}>
         <body className={inter.className + " min-h-[100vh]"}>
           <Navbar />
-
           {children}
         </body>
       </ClientCookiesProvider>
