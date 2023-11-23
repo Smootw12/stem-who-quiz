@@ -1,7 +1,6 @@
 import { QuestionData } from "@/types/question";
 
 export const questions: QuestionData = {
-  numberOfQuestions: 3,
   questions: [
     {
       id: 1,
