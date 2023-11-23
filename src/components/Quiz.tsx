@@ -17,7 +17,6 @@ function Quiz() {
 
   function getAnswer() {
     let biggest = { name: "", value: 0 };
-    let isValid = false;
 
     let isValid = false;
 
