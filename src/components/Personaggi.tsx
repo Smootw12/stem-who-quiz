@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Personaggi() {
   return (
-    <div className="hero min-h-screen ">
+    <div className="hero min-h-screen">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-3xl font-bold py-4">
@@ -28,7 +28,7 @@ function Personaggi() {
                   );
                 case 2:
                   return (
-                    <div className="badge badge-primary text-xl py-4 px-4">
+                    <div className="badge badge-accent text-xl py-4 px-4">
                       {subject}
                     </div>
                   );
@@ -36,7 +36,7 @@ function Personaggi() {
             })}
           </div>
           <h1 className="text-xl font-bold py-4">e presto tanti altri...</h1>
-          <Link href="/quiz" className="btn btn-accent">
+          <Link href="/quiz" className="btn btn-primary">
             FATTO!
           </Link>
         </div>
